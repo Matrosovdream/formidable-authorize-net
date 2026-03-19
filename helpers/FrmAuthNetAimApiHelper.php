@@ -25,9 +25,18 @@ class FrmAuthNetAimApiHelper {
 		if ( empty( $cc_number ) ) {
 			return false;
 		}
+		
 
 		$amount   = $payment->amount;
 		$response = $aim->process_refund( compact( 'trans_id', 'amount', 'cc_number' ) );
+
+		// Check if it's an error
+		foreach ( AUTHNET_ERROR_CODES as $code => $message ) {
+			if ( strpos( $message, trim($code) ) !== false ) {
+				return new WP_Error( 'authnet_error', $message );
+			}
+		}
+
 		if ( $response === true ) {
 			$success = true;
 		} else {
