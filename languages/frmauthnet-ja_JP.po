@@ -1,0 +1,207 @@
+# Copyright (C) 2024 Strategy11
+# This file is distributed under the same license as the Formidable Authorize.Net plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: a2d8bc55ffb2a23897925e74530a7308\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/formidable-authorize-net\n"
+"Last-Translator: \n"
+"Language-Team: Japanese\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2024-04-24T15:13:18+00:00\n"
+"PO-Revision-Date: 2024-04-24 20:45\n"
+"X-Generator: WP-CLI 2.10.0\n"
+"X-Domain: frmauthnet\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Crowdin-Project: a2d8bc55ffb2a23897925e74530a7308\n"
+"X-Crowdin-Project-ID: 28\n"
+"X-Crowdin-Language: ja\n"
+"X-Crowdin-File: /[Strategy11.formidable-authorize-net] master/languages/frmauthnet.pot\n"
+"X-Crowdin-File-ID: 2302\n"
+"Language: ja_JP\n"
+
+#. Plugin Name of the plugin
+#: formidable-authorize-net.php
+msgid "Formidable Authorize.Net"
+msgstr "Formidable Authorize.Net"
+
+#. Plugin URI of the plugin
+#: formidable-authorize-net.php
+msgid "http://formidablepro.com/"
+msgstr "http://formidablepro.com/"
+
+#. Description of the plugin
+#: formidable-authorize-net.php
+msgid "Authorize.net Payment Gateway"
+msgstr "Authorize.net 決済ゲートウェイ"
+
+#. Author of the plugin
+#: formidable-authorize-net.php
+msgid "Strategy11"
+msgstr "Strategy11"
+
+#. Author URI of the plugin
+#: formidable-authorize-net.php
+msgid "http://strategy11.com"
+msgstr "http://strategy11.com"
+
+#: controllers/FrmAuthNetController.php:29
+msgid "Credit Card"
+msgstr "クレジットカード"
+
+#: controllers/FrmAuthNetController.php:48
+msgid "eCheck"
+msgstr "eCheck"
+
+#: controllers/FrmAuthNetController.php:123
+msgid "You are running an outdated version of Formidable. This plugin may not work correctly if you do not update Formidable."
+msgstr "Formidable のバージョンが古いようです。Formidable を更新しない場合、このプラグインが適切に動作しない可能性があります。"
+
+#: controllers/FrmAuthNetController.php:138
+msgid "Settings"
+msgstr "設定"
+
+#: controllers/FrmAuthNetController.php:189
+msgid "Your Formidable Authorize.Net database needs to be updated. Please deactivate and reactivate the plugin to fix this or"
+msgstr "Formidable Authorize.Net データベースを更新する必要があります。この問題を解決するには、プラグインを一度無効化して再び有効化するか、"
+
+#: controllers/FrmAuthNetController.php:191
+msgid "Update Now"
+msgstr "今すぐ更新"
+
+#: controllers/FrmAuthNetController.php:262
+#: controllers/FrmAuthNetController.php:269
+msgid "The Authorize.Net IPN invoice is invalid."
+msgstr "Authorize.Net IPN の請求書が無効です。"
+
+#. translators: %1$s: Payment status, %2$s: Transaction ID
+#: controllers/FrmAuthNetController.php:277
+#: models/FrmAuthNetPayment.php:288
+msgid "Payment %1$s: %2$s"
+msgstr "支払い %1$s: %2$s"
+
+#: controllers/FrmAuthNetSettingsController.php:45
+msgid "Please enable SSL in order to use live mode."
+msgstr "ライブモードを使用するには、SSL を有効化してください。"
+
+#: controllers/FrmAuthNetSettingsController.php:75
+msgid "Settings Saved"
+msgstr "設定を保存しました"
+
+#: models/FrmAuthNetPayment.php:142
+msgid "There was a problem with your payment."
+msgstr "お支払いに問題がありました。"
+
+#: models/FrmAuthNetPayment.php:256
+msgid "Call to Authorize.Net Failed!"
+msgstr "Authorize.Net の呼び出しに失敗しました。"
+
+#: models/FrmAuthNetTransaction.php:134
+msgid "There was a problem with your API call."
+msgstr "API 呼び出しに問題が発生しました。"
+
+#: models/FrmAuthNetWebhook.php:366
+msgid "Signature verification failed."
+msgstr "署名の検証に失敗しました。"
+
+#: views/receipt/receipt.php:14
+msgid "Order Summary"
+msgstr "ご注文内容"
+
+#: views/receipt/receipt.php:19
+msgid "Order #:"
+msgstr "注文番号:"
+
+#: views/receipt/receipt.php:25
+msgid "Invoice #:"
+msgstr "請求書番号:"
+
+#: views/receipt/receipt.php:31
+msgid "Status:"
+msgstr "ステータス:"
+
+#: views/receipt/receipt.php:37
+msgid "Total:"
+msgstr "合計:"
+
+#: views/receipt/_address.php:6
+msgid "Billing Details"
+msgstr "請求先詳細"
+
+#: views/receipt/_address.php:8
+msgid "Shipping Details:"
+msgstr "発送の詳細:"
+
+#: views/receipt/_address.php:15
+msgid "Name:"
+msgstr "名前:"
+
+#: views/receipt/_address.php:23
+msgid "Company:"
+msgstr "会社:"
+
+#: views/receipt/_address.php:32
+msgid "Address:"
+msgstr "住所:"
+
+#: views/settings/form.php:7
+msgid "Authorize.net API Settings"
+msgstr "Authorize.net の API 設定"
+
+#: views/settings/form.php:8
+msgid "Login to your Authorize.net Merchant account. From your Merchant account home page click on the Accounts tab. Next click Settings on the left sidebar. Then click API Login ID and Transaction Key (under security settings)."
+msgstr "Authorize.net マーチャントアカウントにログインします。マーチャントアカウントのホームページから [Accounts] タブをクリックします。次に、左サイドバーの [Settings] をクリックし、セキュリティ設定で [API Login ID and Transaction Key] をクリックします。"
+
+#: views/settings/form.php:16
+msgid "Environment"
+msgstr "環境"
+
+#: views/settings/form.php:22
+msgid "Live"
+msgstr "ライブ"
+
+#: views/settings/form.php:25
+msgid "Testing"
+msgstr "テスト中"
+
+#: views/settings/form.php:36
+msgid "API Login ID"
+msgstr "API ログイン ID"
+
+#: views/settings/form.php:37
+msgid "From your API Settings page copy your API Login ID and paste it here."
+msgstr "API 設定ページで API ログイン ID をコピーし、ここに貼り付けます。"
+
+#: views/settings/form.php:49
+msgid "Transaction Key"
+msgstr "トランザクションキー"
+
+#: views/settings/form.php:50
+msgid "The Transaction key is for sending transactions to your account. From your API Settings page fill out your Secret Answer. Copy your Transaction Key and paste it here."
+msgstr "トランザクションキーは、お客様のアカウントにトランザクションを送信するためのものです。API 設定ページでシークレットアンサーを入力してください。トランザクションキーをコピーし、ここに貼り付けます。"
+
+#: views/settings/form.php:61
+msgid "Signature Key"
+msgstr "署名キー"
+
+#: views/settings/form.php:62
+msgid "The Signature key is for receiving notifications from Authorize.net. From your API Settings page fill out your Secret Answer. Copy your Signature Key and paste it here."
+msgstr "署名キーは、Authorize.net からの通知を受信するためのものです。API 設定ページでシークレットアンサーを入力してください。署名キーをコピーして、ここに貼り付けます。"
+
+#: views/settings/form.php:73
+msgid "Receipt"
+msgstr "領収書"
+
+#: views/settings/form.php:74
+msgid "The style and text on your receipt page."
+msgstr "領収書ページのスタイルとテキスト。"
+
+#: views/settings/form.php:83
+msgid "Header Text"
+msgstr "ヘッダーテキスト"
+
+#: views/settings/form.php:95
+msgid "Footer Text"
+msgstr "フッターテキスト"
+

@@ -1,0 +1,90 @@
+/*
+   Form Action Icon
+ */
+.clear:before,
+.clear:after {
+	content: " ";
+	display: table;
+}
+
+.clear:after {
+	clear: both;
+}
+
+/*
+    Settings Views Style
+    /views/payments/edit.php
+ */
+#authorize_net_settings .form-field .howto {
+	width: 100%;
+	float: left;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	display: block;
+}
+
+/*
+   AIM Reciept Placemanet
+ */
+#authorize_net_settings .form-field .aim_receipt_label {
+	width: 24%;
+	height: 180px!important;
+	display: inline-block;
+}
+
+.aim_receipt_img {
+	display: block;
+	width: 150px;
+	height: 110px;
+	background-position: center center;
+	background-size: contain;
+	background-repeat: no-repeat;
+	margin-top: 10px;
+}
+
+.aim_receipt_img.aim_receipt_top {
+	background-image: url('../img/receipt_top.png');
+}
+.aim_receipt_img.aim_receipt_right {
+	background-image: url('../img/receipt_right.png');
+}
+.aim_receipt_img.aim_receipt_bottom {
+	background-image: url('../img/receipt_bottom.png');
+}
+.aim_receipt_img.aim_receipt_left {
+	background-image: url('../img/receipt_left.png');
+}
+.form-table.sidebar tr td:first-child {
+	font-weight:bold;
+}
+
+.form-table.sidebar td {
+	width:inherit;
+	padding: 5px;
+
+}
+.sr-only {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0,0,0,0);
+	border: 0;
+}
+@media (max-width: 768px) {
+	#authorize_net_settings .form-field .aim_receipt_label {
+		width: 100%;
+	}
+
+}
+
+@media (max-width: 992px) {
+	#authorize_net_settings .form-field .aim_receipt_label {
+		width: 50%;
+	}
+	#authorize_net_settings .form-field .howto {
+	    width: 100%;
+	}
+}

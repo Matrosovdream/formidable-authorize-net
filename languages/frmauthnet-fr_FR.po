@@ -1,0 +1,207 @@
+# Copyright (C) 2024 Strategy11
+# This file is distributed under the same license as the Formidable Authorize.Net plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: a2d8bc55ffb2a23897925e74530a7308\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/formidable-authorize-net\n"
+"Last-Translator: \n"
+"Language-Team: French\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2024-04-24T15:13:18+00:00\n"
+"PO-Revision-Date: 2024-05-06 13:18\n"
+"X-Generator: WP-CLI 2.10.0\n"
+"X-Domain: frmauthnet\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Crowdin-Project: a2d8bc55ffb2a23897925e74530a7308\n"
+"X-Crowdin-Project-ID: 28\n"
+"X-Crowdin-Language: fr\n"
+"X-Crowdin-File: /[Strategy11.formidable-authorize-net] master/languages/frmauthnet.pot\n"
+"X-Crowdin-File-ID: 2302\n"
+"Language: fr_FR\n"
+
+#. Plugin Name of the plugin
+#: formidable-authorize-net.php
+msgid "Formidable Authorize.Net"
+msgstr "Formidable Authorize.Net"
+
+#. Plugin URI of the plugin
+#: formidable-authorize-net.php
+msgid "http://formidablepro.com/"
+msgstr "http://formidablepro.com/"
+
+#. Description of the plugin
+#: formidable-authorize-net.php
+msgid "Authorize.net Payment Gateway"
+msgstr "Passerelle de paiement Authorize.net"
+
+#. Author of the plugin
+#: formidable-authorize-net.php
+msgid "Strategy11"
+msgstr "Strategy11"
+
+#. Author URI of the plugin
+#: formidable-authorize-net.php
+msgid "http://strategy11.com"
+msgstr "http://strategy11.com"
+
+#: controllers/FrmAuthNetController.php:29
+msgid "Credit Card"
+msgstr "Carte bancaire"
+
+#: controllers/FrmAuthNetController.php:48
+msgid "eCheck"
+msgstr "eChèque"
+
+#: controllers/FrmAuthNetController.php:123
+msgid "You are running an outdated version of Formidable. This plugin may not work correctly if you do not update Formidable."
+msgstr "Vous utilisez une ancienne version de Formidable. Cette extension ne fonctionne pas correctement si vous ne mettez pas à jour Formidable."
+
+#: controllers/FrmAuthNetController.php:138
+msgid "Settings"
+msgstr "Réglages"
+
+#: controllers/FrmAuthNetController.php:189
+msgid "Your Formidable Authorize.Net database needs to be updated. Please deactivate and reactivate the plugin to fix this or"
+msgstr "Votre base de données Formidable Authorize.Net doit être mise à jour. Veuillez désactiver et réactiver l’extension pour corriger cela ou"
+
+#: controllers/FrmAuthNetController.php:191
+msgid "Update Now"
+msgstr "Mettre à jour maintenant"
+
+#: controllers/FrmAuthNetController.php:262
+#: controllers/FrmAuthNetController.php:269
+msgid "The Authorize.Net IPN invoice is invalid."
+msgstr "La facture IPN de Authorize.Net n’est pas valide."
+
+#. translators: %1$s: Payment status, %2$s: Transaction ID
+#: controllers/FrmAuthNetController.php:277
+#: models/FrmAuthNetPayment.php:288
+msgid "Payment %1$s: %2$s"
+msgstr "Paiement %1$s : %2$s"
+
+#: controllers/FrmAuthNetSettingsController.php:45
+msgid "Please enable SSL in order to use live mode."
+msgstr "Veuillez activer SSL afin d’utiliser le mode en direct."
+
+#: controllers/FrmAuthNetSettingsController.php:75
+msgid "Settings Saved"
+msgstr "Paramètres enregistrés"
+
+#: models/FrmAuthNetPayment.php:142
+msgid "There was a problem with your payment."
+msgstr "Un problème est survenu avec votre paiement."
+
+#: models/FrmAuthNetPayment.php:256
+msgid "Call to Authorize.Net Failed!"
+msgstr "Échec de l’appel à Authorize.Net !"
+
+#: models/FrmAuthNetTransaction.php:134
+msgid "There was a problem with your API call."
+msgstr "Un problème est survenu avec votre appel à l’API."
+
+#: models/FrmAuthNetWebhook.php:366
+msgid "Signature verification failed."
+msgstr "La vérification de la signature a échoué."
+
+#: views/receipt/receipt.php:14
+msgid "Order Summary"
+msgstr "Récapitulatif de commande"
+
+#: views/receipt/receipt.php:19
+msgid "Order #:"
+msgstr "Commande n° :"
+
+#: views/receipt/receipt.php:25
+msgid "Invoice #:"
+msgstr "Facture n° :"
+
+#: views/receipt/receipt.php:31
+msgid "Status:"
+msgstr "État :"
+
+#: views/receipt/receipt.php:37
+msgid "Total:"
+msgstr "Total:"
+
+#: views/receipt/_address.php:6
+msgid "Billing Details"
+msgstr "Détails de la facturation"
+
+#: views/receipt/_address.php:8
+msgid "Shipping Details:"
+msgstr "Détails de l’expédition :"
+
+#: views/receipt/_address.php:15
+msgid "Name:"
+msgstr "Nom :"
+
+#: views/receipt/_address.php:23
+msgid "Company:"
+msgstr "Entreprise:"
+
+#: views/receipt/_address.php:32
+msgid "Address:"
+msgstr "Adresse :"
+
+#: views/settings/form.php:7
+msgid "Authorize.net API Settings"
+msgstr "Réglages API Authorize.net"
+
+#: views/settings/form.php:8
+msgid "Login to your Authorize.net Merchant account. From your Merchant account home page click on the Accounts tab. Next click Settings on the left sidebar. Then click API Login ID and Transaction Key (under security settings)."
+msgstr "Connectez-vous à votre compte marchand Authorize.net. Depuis la page d’accueil, cliquez sur l’onglet Comptes. Ensuite, cliquez sur Réglages dans la colonne latérale gauche. Puis cliquez sur ID de connexion API et Clé de transaction (sous les réglages de sécurité)."
+
+#: views/settings/form.php:16
+msgid "Environment"
+msgstr "Environnement"
+
+#: views/settings/form.php:22
+msgid "Live"
+msgstr "En direct"
+
+#: views/settings/form.php:25
+msgid "Testing"
+msgstr "Test"
+
+#: views/settings/form.php:36
+msgid "API Login ID"
+msgstr "ID de connexion à l’API"
+
+#: views/settings/form.php:37
+msgid "From your API Settings page copy your API Login ID and paste it here."
+msgstr "Depuis votre page de réglages API, copiez votre ID de connexion API et collez-le ici."
+
+#: views/settings/form.php:49
+msgid "Transaction Key"
+msgstr "Clé de transaction"
+
+#: views/settings/form.php:50
+msgid "The Transaction key is for sending transactions to your account. From your API Settings page fill out your Secret Answer. Copy your Transaction Key and paste it here."
+msgstr "La clé de transaction sert à envoyer des transactions à votre compte. Depuis votre page de réglages API, remplissez votre réponse secrète. Copiez votre clé de transaction et collez-la ici."
+
+#: views/settings/form.php:61
+msgid "Signature Key"
+msgstr "Clé de signature"
+
+#: views/settings/form.php:62
+msgid "The Signature key is for receiving notifications from Authorize.net. From your API Settings page fill out your Secret Answer. Copy your Signature Key and paste it here."
+msgstr "La clé de signature sert à recevoir des notifications de Authorize.net. Depuis votre page de réglages API, remplissez votre réponse secrète. Copiez votre clé de signature et collez-la ici."
+
+#: views/settings/form.php:73
+msgid "Receipt"
+msgstr "Reçu"
+
+#: views/settings/form.php:74
+msgid "The style and text on your receipt page."
+msgstr "Le style et le texte sur votre page de reçu."
+
+#: views/settings/form.php:83
+msgid "Header Text"
+msgstr "Texte de l’en-tête"
+
+#: views/settings/form.php:95
+msgid "Footer Text"
+msgstr "Texte du pied de page"
+

@@ -1,0 +1,174 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2025-06-04T15:45:53+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.11.0\n"
+"X-Domain: formidable-payments\n"
+
+#: controllers/FrmTransCRUDController.php:97
+msgid "Payment was Successfully Updated"
+msgstr ""
+
+#: controllers/FrmTransCRUDController.php:99
+msgid "There was a problem updating that payment"
+msgstr ""
+
+#: controllers/FrmTransEntriesController.php:21
+#: controllers/FrmTransListsController.php:27
+#: controllers/FrmTransPaymentsController.php:11
+#: helpers/FrmTransListHelper.php:69
+#: views/lists/list.php:3
+#: views/payments/show.php:3
+#: views/payments/sidebar_list.php:4
+#: views/subscriptions/show.php:3
+msgid "Payments"
+msgstr ""
+
+#: controllers/FrmTransEntriesController.php:22
+#: views/payments/form.php:84
+msgid "Expiration Date"
+msgstr ""
+
+#: controllers/FrmTransFieldsController.php:10
+#: views/subscriptions/show.php:85
+msgid "Gateway"
+msgstr ""
+
+#: controllers/FrmTransListsController.php:129
+msgid "No payments were selected"
+msgstr ""
+
+#: controllers/FrmTransListsController.php:162
+msgid "Payments were Successfully Deleted"
+msgstr ""
+
+#: controllers/FrmTransPaymentsController.php:39
+msgid "Payment was Successfully Created"
+msgstr ""
+
+#: controllers/FrmTransPaymentsController.php:42
+msgid "There was a problem creating that payment"
+msgstr ""
+
+#: helpers/FrmTransAppHelper.php:37
+#: helpers/FrmTransAppHelper.php:38
+msgid "Manual"
+msgstr ""
+
+#: helpers/FrmTransListHelper.php:23
+msgid "Subscriptions list"
+msgstr ""
+
+#. translators: %s: The current trans type, either payments/subscriptions
+#: helpers/FrmTransListHelper.php:437
+msgid "ALL selected %s in this form will be permanently deleted. Want to proceed?"
+msgstr ""
+
+#: models/FrmTransAction.php:186
+msgid "Canceled and Expired"
+msgstr ""
+
+#: models/FrmTransAction.php:207
+msgid "&mdash; Select Field &mdash;"
+msgstr ""
+
+#: models/FrmTransAction.php:314
+msgid "payment"
+msgstr ""
+
+#: views/action-settings/options.php:92
+msgid "Later (collect manually)"
+msgstr ""
+
+#: views/action-settings/options.php:125
+msgid "Gateway(s)"
+msgstr ""
+
+#: views/action-settings/options.php:162
+msgid "Bank Account Details"
+msgstr ""
+
+#: views/action-settings/options.php:168
+msgid "Routing Number"
+msgstr ""
+
+#: views/action-settings/options.php:174
+msgid "Account Number"
+msgstr ""
+
+#: views/action-settings/options.php:180
+msgid "Bank Name"
+msgstr ""
+
+#: views/action-settings/options.php:217
+#: views/action-settings/options.php:260
+msgid "Company"
+msgstr ""
+
+#: views/action-settings/options.php:225
+msgid "Shipping Information"
+msgstr ""
+
+#: views/action-settings/options.php:226
+msgid "Select the fields to associate with the customer shipping information."
+msgstr ""
+
+#: views/action-settings/options.php:231
+msgid "Shipping"
+msgstr ""
+
+#: views/action-settings/options.php:234
+msgid "Collect shipping information with this form"
+msgstr ""
+
+#: views/action-settings/options.php:267
+msgid "After Payment"
+msgstr ""
+
+#: views/action-settings/options.php:268
+msgid "Change a field value when the status of a payment changes."
+msgstr ""
+
+#: views/action-settings/options.php:274
+msgid "Add"
+msgstr ""
+
+#: views/action-settings/options.php:281
+msgid "Payment Status"
+msgstr ""
+
+#: views/action-settings/options.php:282
+msgid "Field"
+msgstr ""
+
+#: views/action-settings/options.php:283
+msgid "Value"
+msgstr ""
+
+#: views/fields/gateway-back-end.php:6
+msgid "Do not delete this field. It will be hidden in your form but is required to process payments."
+msgstr ""
+
+#: views/payments/edit.php:3
+msgid "Edit Payment"
+msgstr ""
+
+#: views/payments/edit.php:14
+#: views/payments/new.php:12
+msgid "Publish"
+msgstr ""
+
+#: views/payments/form.php:62
+msgid "Subscription Number:"
+msgstr ""
+
+#: views/payments/new.php:3
+msgid "New Payment"
+msgstr ""
