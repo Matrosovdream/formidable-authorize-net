@@ -4,47 +4,66 @@ class FrmAuthNetAimApiHelper {
 
 	public static function refund_payment( $trans_id, $atts ) {
 
+		// Delay for 1 second
+		//sleep(1);
+
 		$payment = $atts['payment'];
 		$entry   = FrmEntry::getOne( $payment->item_id, true );
 		$action  = FrmTransAction::get_single_action_type( $payment->action_id, 'payment' );
 
-		$payment_atts = array(
+		$payment_atts = [
 			'entry'      => $entry,
 			'action'     => $action,
 			'form'       => $entry->form_id,
 			'invoice_id' => $payment->id,
-		);
-
+		];
+	
 		$aim = new FrmAuthNetAim( $payment_atts );
-		$cc_field = isset( $entry->metas[ $action->post_content['credit_card'] ] ) ? $entry->metas[ $action->post_content['credit_card'] ] : '';
-		if ( empty( $cc_field ) ) {
-			return false;
+	
+		$cc_field = $entry->metas[ $action->post_content['credit_card'] ] ?? '';
+		if ( empty( $cc_field ) || empty( $cc_field['cc'] ) ) {
+			return new WP_Error('authnet_error', 'Missing credit card data');
 		}
-
-		$cc_number = substr( $cc_field['cc'], strlen( $cc_field['cc'] ) - 4 );
+	
+		$cc_number = substr( $cc_field['cc'], -4 );
 		if ( empty( $cc_number ) ) {
-			return false;
+			return new WP_Error('authnet_error', 'Invalid card number');
 		}
+	
+		$amount = $payment->amount;
+
+
+		$refData = [
+			'trans_id' => $trans_id,
+			'amount'   => $amount,
+			'cc_number'=> $cc_number,
+		];
+	
+		// 1. TRY REFUND
+		$refund = $aim->process_refund([
+			'trans_id' => $trans_id,
+			'amount'   => $amount,
+			'cc_number'=> $cc_number,
+		]);
+		if ( $refund == 1 ) { return true; }
+
+		// 2. TRY VOID
+		$void = $aim->process_void([
+			'trans_id' => $trans_id,
+		]);
+
+		if ( $void == 1 ) { return true; }
+	
+		// 3. BOTH FAILED
+		$error = is_string($void) ? $void : (is_string($refund) ? $refund : 'Refund and void failed');
+		$error = strip_tags($error);
+
+		// For debugging
+		//$error .= ' (Transaction ID: ' . $trans_id . '; Refund result: ' . (is_string($refund) ? $refund : 'unknown') . '; Void result: ' . (is_string($void) ? $void : 'unknown') . ')';
 		
-
-		$amount   = $payment->amount;
-		$response = $aim->process_refund( compact( 'trans_id', 'amount', 'cc_number' ) );
-
-		// Check if it's an error
-		foreach ( AUTHNET_ERROR_CODES as $code => $message ) {
-			if ( strpos( $message, trim($code) ) !== false ) {
-				return new WP_Error( 'authnet_error', $message );
-			}
-		}
-
-		if ( $response === true ) {
-			$success = true;
-		} else {
-			// If the refund fails, attempt to void instead
-			$response = $aim->process_void( compact( 'trans_id' ) );
-			$success = ( $response === true );
-		}
-
-		return $success;
+		return new WP_Error('authnet_error', $error);
 	}
+
 }
+
+
